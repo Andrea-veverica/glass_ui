@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Ubuntu:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    /* width: 100vw;
+    height: auto;
+    padding-top: 50px; */
+
+    font-family: 'Ubuntu';
+    }
+
+.content {
+    font-family: 'Ubuntu';
+    width: 100vw;
+    height: auto;
+    padding-top: 60px;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container h1 {
+    margin: 20px ;
+}
+
+.container p {
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#site-title {
+    font-weight: bold;
+}
+
+.main-nav {
+    margin-left: 60px;
+    padding-top: 10px 0 10px;
+    position: absolute;
+    right: 0;
+    top: 12px;
+    /* position: absolute;
+    right: 0; - ak nie je uvedene ABSOLUTE, tak nemozem dat right */
+}
+
+.main-nav-list li {
+    display: inline;
+}
+
+.main-nav-list li a {
+    margin-right: 20px;
+}
+
+.text {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.text:visited {
+    color: rgb(34, 31, 31);
+}
+
+.wrap-btn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.wrap {
+    background: red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    /* transform: translateX(-100%); - toto spravi to ze cely stlpec zmyzne
+     */
+    transition: transform .5s ease-in-out;
+}
+
+/* if there is .visible class inside the .wrap class */
+.wrap.visible {
+    transform: translateX(0);
+}
+
+.wrap-black {
+    background-color: rgb(34, 31, 31);
+    width: 60%;
+    max-width: 480px;
+    transition-delay: 0.2s;
+}
+
+.wrap-white {
+    background-color: #fff;
+    width: 95%;
+    padding: 40px;
+    position: relative;
+}
+
+.close-btn {
+    opacity: 0.4;
+    position: absolute;
+    top: 40px;
+    left: 400px;
+}
+
+.list {
+    list-style: none ;
+    padding: 0;
+}
+
+.list li {
+    margin: 20px 0;
+}
+
+.list li a, .main-nav-list li a {
+    color: rgb(34, 31, 31);
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        display: none;
+        /* display: none; - toto spravi, ze vrchny panel zmyzne pri zmensovani okna */
+    }
+}
